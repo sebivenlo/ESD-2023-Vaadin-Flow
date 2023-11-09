@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  vaadin:
+    image: "esde-vaadin:latest"
+    container_name: "Vaadin_Workshop"
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./:/usr/app"
+      - "myapp:/usr/app"
+
+volumes:
+  myapp:
