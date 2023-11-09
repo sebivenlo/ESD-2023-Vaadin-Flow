@@ -3,5 +3,5 @@ ENV HOME=/usr/app
 RUN mkdir -p $HOME
 WORKDIR $HOME
 ADD . $HOME
-RUN ./mvnw clean install
+RUN cd $HOME || ./mvnw clean install
 ENTRYPOINT ["./mvnw"]
