@@ -1,7 +1,9 @@
 package com.example.esde.views;
 
-import com.example.esde.views.about.AboutView;
 import com.example.esde.views.helloworld.HelloWorldView;
+import com.example.esde.views.tasks.Task1;
+import com.example.esde.views.tasks.Task2;
+import com.example.esde.views.tasks.Task3;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -19,6 +21,10 @@ import org.vaadin.lineawesome.LineAwesomeIcon;
  * The main view is a top-level placeholder for other views.
  */
 public class MainLayout extends AppLayout {
+
+    /**
+     * Don't touch this file!
+     */
 
     private H2 viewTitle;
 
@@ -39,7 +45,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void addDrawerContent() {
-        H1 appName = new H1("My App");
+        H1 appName = new H1("ESDE Vaadin Workshop");
         appName.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
         Header header = new Header(appName);
 
@@ -51,8 +57,9 @@ public class MainLayout extends AppLayout {
     private SideNav createNavigation() {
         SideNav nav = new SideNav();
 
-        nav.addItem(new SideNavItem("Hello World", HelloWorldView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
-        nav.addItem(new SideNavItem("About", AboutView.class, LineAwesomeIcon.FILE.create()));
+        nav.addItem(new SideNavItem("Task 1 - Views", Task1.class, LineAwesomeIcon.FILE_CODE.create()));
+        nav.addItem(new SideNavItem("Task 2 - Components", Task2.class, LineAwesomeIcon.FILE_CODE.create()));
+        nav.addItem(new SideNavItem("Task 3 - Database", Task3.class, LineAwesomeIcon.FILE_CODE.create()));
 
         return nav;
     }
