@@ -11,6 +11,9 @@ jobs:
   publish-docker-image:
 
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
 
     steps:
     - uses: actions/checkout@v3
