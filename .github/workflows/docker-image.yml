@@ -28,7 +28,8 @@ jobs:
       with:
         context: ./vaadin-app
         push: true
-        tags: esde-vaadin:latest
+        tags: |
+            https://ghcr.io/${{ github.repository }}/esde--vaadin:latest
 
 
 
