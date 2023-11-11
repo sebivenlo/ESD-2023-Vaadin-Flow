@@ -14,5 +14,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build  -t esde-vaadin:latest ./vaadin-app
+    - name: Log in to GitHub Docker Registry
+      uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+      with:
+        registry: docker.YOUR-HOSTNAME.com
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build and push Docker image
+      uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+      with:
+        context: ./vaadin-app
+        push: true
+        tags: esde-vaadin:latest
+
+
+
