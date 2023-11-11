@@ -29,7 +29,7 @@ jobs:
         context: ./vaadin-app
         push: true
         tags: |
-            ghcr.io/${{ github.repository }}/esde--vaadin:latest
+            ghcr.io/sebivenlo/esd-2023-vaadin-flow/esde--vaadin:latest
 
 
 
