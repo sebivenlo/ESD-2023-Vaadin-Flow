@@ -1,4 +1,4 @@
-package com.example.esde.views.todolist;
+package com.example.esde.views.task2;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 

@@ -1,5 +1,6 @@
-package com.example.esde.views.todolist;
+package com.example.esde.views.task2;
 
+import com.example.esde.views.task2.ToDoItem;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.grid.Grid;
 
@@ -18,10 +19,10 @@ public class ToDoList extends FormLayout {
         grid.addColumn(ToDoItem::getToDoDescription).setHeader("Description");
         // TODO 1.2: Add the other columns for the fields of an ToDoItem and set an appropriate header
 
-        // TODO 1.3: Set the items of the grid to be filled by
+        // TODO 1.3: Set the items of the grid to be filled by the todos list
     }
 
-    // TODO 2: Add the ToDoItem (item) from the parameter to the list of ToDoItems and set the items of the grid to show the list
+    // TODO 2: Add the ToDoItem (item) from the parameter to the list of ToDoItems and make the grid contain the new todo
     public void addToDoItem(ToDoItem item) {
 
         throw new UnsupportedOperationException("This function is not implemented yet :(");

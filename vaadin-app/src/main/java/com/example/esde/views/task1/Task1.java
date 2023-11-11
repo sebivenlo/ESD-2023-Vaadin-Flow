@@ -1,16 +1,17 @@
-package com.example.esde.views.tasks;
+package com.example.esde.views.task1;
 
 import com.example.esde.views.MainLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H2;
-import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.theme.Theme;
+import com.vaadin.flow.theme.lumo.Lumo;
 
 /**
- * This will be a very simple task, change some values, create some objects and you'll be done!
+ * This will be a very simple task, change some values, create some objects, and you'll be done!
  */
 @PageTitle("Task 1 - ESDE Vaadin Workshop")
 @Route(value = "task1", layout = MainLayout.class)

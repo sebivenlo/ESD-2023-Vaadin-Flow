@@ -1,9 +1,8 @@
 package com.example.esde.views;
 
-import com.example.esde.views.helloworld.HelloWorldView;
-import com.example.esde.views.tasks.Task1;
-import com.example.esde.views.tasks.Task2;
-import com.example.esde.views.tasks.Task3;
+import com.example.esde.views.task1.Task1;
+import com.example.esde.views.task2.Task2;
+import com.example.esde.views.task3.Task3;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -21,10 +20,6 @@ import org.vaadin.lineawesome.LineAwesomeIcon;
  * The main view is a top-level placeholder for other views.
  */
 public class MainLayout extends AppLayout {
-
-    /**
-     * Don't touch this file!
-     */
 
     private H2 viewTitle;
 
