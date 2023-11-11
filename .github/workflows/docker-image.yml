@@ -20,7 +20,6 @@ jobs:
     - name: Log in to GitHub Docker Registry
       uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
       with:
-        registry: https://hub.docker.com
         username: apavlitschenko
         password: dckr_pat_JS7MrdsVuDiOX-2XrzZl2ijVdVc
     - name: Build and push Docker image
