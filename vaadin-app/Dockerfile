@@ -1,7 +1,5 @@
-FROM eclipse-temurin:17-jdk-jammy
-ENV HOME=/usr/app
-RUN mkdir -p $HOME
-WORKDIR $HOME
-ADD . $HOME
-RUN cd $HOME || ./mvnw clean install
-ENTRYPOINT ["./mvnw"]
+FROM maven:3.9.5-eclipse-temurin-17-focal
+WORKDIR /usr/app
+COPY . .
+EXPOSE 8080
+ENTRYPOINT ["mvn"]
