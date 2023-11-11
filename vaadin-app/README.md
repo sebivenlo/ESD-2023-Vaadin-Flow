@@ -3,6 +3,9 @@
 ## 1. Build Docker image
 First you have to build the Docker image via the provided Dockerfile.
 Do this by running the following command:\
+
+Note: Command should be run from the directory, where this README.md is located!
+
 ```docker build -t esde-vaadin:latest .```
 
 Now the image will be created, this might take a few seconds.
@@ -20,7 +23,7 @@ Linux:
 This will download all maven dependencies automatically and eventually run the vaadin app. 
 Now your container called ``esde-vaadin`` is up and running and you can access the website by accessing [localhost:8080](http://localhost:8080) in your browser.
 
-## 3. Bring your Changes to Docker
+## 3. Bring your Changes to the Docker Environment
 Once The docker Container is running, and you have changes, which you want to run you can use the following command:
 ```docker exec esde-vaadin mvn compile```
 
