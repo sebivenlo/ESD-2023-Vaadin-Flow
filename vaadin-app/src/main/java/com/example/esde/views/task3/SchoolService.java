@@ -1,6 +1,5 @@
 package com.example.esde.views.task3;
 
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

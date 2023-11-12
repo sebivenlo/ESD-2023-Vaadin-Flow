@@ -1,8 +1,6 @@
 package com.example.esde.views.task3;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
 
 import java.util.Set;
 
@@ -11,13 +9,14 @@ public class CourseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "course_id")
     private long id;
 
-    @NotEmpty
+    // TODO: Add some validation annotations here that make sense for this property
+    // You can take a look at https://www.baeldung.com/java-validation for some inspiration
     private String shortName;
 
-    @NotEmpty
+    // TODO: Add some validation annotations here that make sense for this property
+    // You can take a look at https://www.baeldung.com/java-validation for some inspiration
     private String longName;
 
     @OneToMany

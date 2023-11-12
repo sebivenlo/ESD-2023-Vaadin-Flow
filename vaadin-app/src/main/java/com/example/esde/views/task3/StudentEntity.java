@@ -1,19 +1,16 @@
 package com.example.esde.views.task3;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotEmpty;
 
 @Entity
 public class StudentEntity {
 
-    // Maybe delete student entity and repository as task? 🤔
     @Id
-    @Column(name = "student_id")
     private Long id;
 
-    @NotEmpty
+    // TODO: Add some validation annotations here that make sense for this property
+    // You can take a look at https://www.baeldung.com/java-validation for some inspiration
     private String fullName;
 
     public StudentEntity () {}
