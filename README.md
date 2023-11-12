@@ -21,6 +21,8 @@ Linux:
 This command will pull our esde workshop image. Afterwards it will create a temporary container, and copy the sources into the vaadin-workshop folder. Afterwards the temporary Container will be stopped and removed.
 Then the proper vaadin container will be created with the correct directory mounted, and the ports forwarded. 
 
+Now your container called ``esde-vaadin`` is up and running and you can access the website by accessing [localhost:8080](http://localhost:8080) in your browser.
+
 ## 2. Bring your Changes to the Docker Environment
 Once The docker Container is running, and you have changes, which you want to run you can use the following command:
 ```docker exec esde-vaadin mvn compile```
@@ -32,13 +34,19 @@ Note: This might take a minute
 
 # Demo
 
-# ESD template
+## 1. Pull Image
+Pull the image with the following command 
 
-Please make sure all artifacts are in this GitHub repository.  
-That includes:
+```docker pull apavlitschenko/esde-vaadin-demo```
 
-- Code
-- Workshop materials
-- Presentation (if applicable)
-- References.
-- Docker (compose) file (if applicable)
+
+
+## 2. Run
+
+Run the Container with the following command
+
+```docker run -p 8081:8080 --name esde-vaadin-demo apavlitschenko/esde-vaadin-demo:latest```
+
+Now your container called ``esde-vaadin-demo`` is up and running and you can access the website by accessing [localhost:8081](http://localhost:8081) in your browser.
+
+
