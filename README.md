@@ -2,9 +2,9 @@
 
 ## 1. Setup the Docker Environment
 
-CAUTION: make sure no application is listening on port 8080 before running this command!
+CAUTION: make sure no application is listening on port 8080 before running this command, or change the port in the following commands!
 
-Windows:
+Windows/Mac:
 
 ```docker pull apavlitschenko/esde-vaadin && docker run -d --name esde-vaadin-tmp apavlitschenko/esde-vaadin:latest && docker cp esde-vaadin-tmp:usr/app/ vaadin-workshop && docker stop esde-vaadin-tmp && docker rm esde-vaadin-tmp && cd vaadin-workshop && docker run --rm -p 8080:8080 -v .:/usr/app --name esde-vaadin apavlitschenko/esde-vaadin:latest```
 
