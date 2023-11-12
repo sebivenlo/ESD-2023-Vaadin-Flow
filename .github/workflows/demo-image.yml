@@ -1,0 +1,34 @@
+name: Docker Image CI
+
+on:  
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  publish-docker-image:
+
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Log in to GitHub Docker Registry
+      uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+      with:
+        username: apavlitschenko
+        password: dckr_pat_JS7MrdsVuDiOX-2XrzZl2ijVdVc
+    - name: Build and push Docker image
+      uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+      with:
+        context: ./vaadin-demo
+        push: true
+        tags: |
+            apavlitschenko/esde-vaadin-demo:latest
+
+
+
