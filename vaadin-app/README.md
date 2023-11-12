@@ -10,11 +10,7 @@ Note: Command should be run from the directory, where this README.md is located!
 
 OR:
 You can pull our pre buitld image with the following command:
-```docker pull ghcr.io/sebivenlo/esd-2023-vaadin-flow/esde--vaadin:latest```
-
-or
-
-```docker pull ghcr.io/sebivenlo/esd-2023-vaadin-flow/esde--vaadin:latest```
+```docker pull apavlitschenko/esde-vaadin```
 
 Now the image will be created, this might take a few seconds.
 
