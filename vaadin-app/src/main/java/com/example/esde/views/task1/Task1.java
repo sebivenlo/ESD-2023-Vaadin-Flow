@@ -57,7 +57,7 @@ public class Task1 extends VerticalLayout {
 
     /**
      * TODO 4.1: Add a method that returns a new green button (hint: change the property "background-color")
-     * TODO 4.2: Clicking on the button should navigate to the next task (Task2)
+     * TODO 4.2: Clicking on the button should navigate to the next task ("/task2")
      * (Dont forget to add the button to the layout)
      */
 
