@@ -12,8 +12,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * This is a Custom DueDateValidator for Vaading. The Purpose of this Validator is to check, if the Date Format matches
- * the format provided to the Constructor, and to validate, that the selected Due Date is in the future.
+ * This is a Custom DueDateValidator for Vaadin. The Purpose of this Validator is to check if the Date Format matches
+ * the format provided to the Constructor and to validate that the selected Due Date is in the future.
  */
 public class DueDateValidator extends AbstractValidator<String> {
 
@@ -22,7 +22,7 @@ public class DueDateValidator extends AbstractValidator<String> {
     public DueDateValidator(String errorMsg, String dateFormat){
         //sets Message, that is displayed, when Validation fails.
         super(errorMsg);
-        //parser for date format validation is instatiated
+        //parser for date format validation is instantiated
         dateParser = new SimpleDateFormat(dateFormat);
         dateParser.setLenient(false);
     }

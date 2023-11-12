@@ -51,7 +51,7 @@ public class Task2 extends HorizontalLayout {
 
         Button createButton = new Button("Create");
         createButton.addClickListener(event -> {
-            // TODO 3: Create a new ToDoItem object, and use the binder to write to this BEAN
+            // TODO 3: Create a new ToDoItem object and use the binder to write to this BEAN and add it to the todoList
             throw new UnsupportedOperationException("Not yet Implemented!");
         });
 
