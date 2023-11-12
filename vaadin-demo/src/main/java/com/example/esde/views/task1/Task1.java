@@ -7,8 +7,6 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.theme.Theme;
-import com.vaadin.flow.theme.lumo.Lumo;
 
 /**
  * This will be a very simple task, change some values, create some objects, and you'll be done!
@@ -56,5 +54,11 @@ public class Task1 extends VerticalLayout {
 
         return button;
     }
+
+    /**
+     * TODO 4.1: Add a method that returns a new green button (hint: change the property "background-color")
+     * TODO 4.2: Clicking on the button should navigate to the next task (Task2)
+     * (Dont forget to add the button to the layout)
+     */
 
 }

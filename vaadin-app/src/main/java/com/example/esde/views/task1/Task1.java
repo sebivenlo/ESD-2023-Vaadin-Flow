@@ -1,7 +1,9 @@
 package com.example.esde.views.task1;
 
 import com.example.esde.views.MainLayout;
+import com.example.esde.views.task2.Task2;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
@@ -20,13 +22,15 @@ public class Task1 extends VerticalLayout {
     private H2 header;
     private TextField textfield;
     private Button button;
+    private Button successButton;
 
     public Task1() {
         header = createHeader();
         button = createButton();
+        successButton = createSuccessButton();
         textfield = null;
 
-        add(header, button);
+        add(header, button, successButton);
     }
 
     /**
@@ -54,6 +58,21 @@ public class Task1 extends VerticalLayout {
         Button button = new Button();
         button.setText("Update header");
 
+        return button;
+    }
+
+    /**
+     * TODO 4.1: Add a method that returns a new green button (hint: change the property "background-color")
+     * TODO 4.2: Clicking on the button should navigate to the next task (Task2)
+     * (Dont forget to add the button to the layout)
+     */
+    private Button createSuccessButton() {
+        Button button = new Button();
+        button.setText("Next Task");
+        button.getStyle().set("background-color","green");
+        button.addClickListener(buttonClickEvent -> {
+            getUI().ifPresent(ui -> ui.navigate(Task2.class));
+        });
         return button;
     }
 
