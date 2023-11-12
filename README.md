@@ -10,7 +10,13 @@ Windows:
 
 Linux:
 
-```TBD```
+```sudo docker pull apavlitschenko/esde-vaadin && sudo docker run -d --name esde-vaadin-tmp apavlitschenko/esde-vaadin:latest``` 
+
+```mkdir vaadin-workshop && mkdir vaadin-workshop/app```
+
+```sudo docker cp esde-vaadin-tmp:usr/app/ vaadin-workshop && sudo docker stop esde-vaadin-tmp && sudo docker rm esde-vaadin-tmp``` 
+
+```cd vaadin-workshop/app && sudo docker run --rm -p 8080:8080 -v ./:/usr/app --name esde-vaadin apavlitschenko/esde-vaadin:latest```
 
 This command will pull our esde workshop image. Afterwards it will create a temporary container, and copy the sources into the vaadin-workshop folder. Afterwards the temporary Container will be stopped and removed.
 Then the proper vaadin container will be created with the correct directory mounted, and the ports forwarded. 
