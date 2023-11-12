@@ -1,35 +1,39 @@
 package com.example.esde.views.task2;
 
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-public class ToDoItem extends VerticalLayout {
 
-    String description;
-    String dueDate;
-    String priority;
 
-    public ToDoItem(String description, String dueDate, String priority) {
+public class ToDoItem {
+
+    private String description;
+    private String dueDate;
+    private String priority;
+
+    public ToDoItem(){
+
+    }
+
+    public String getToDoDescription() {
+        return description;
+    }
+
+    public String getDueDate() {
+        return dueDate;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
+    }
+
+    public void setPriority(String priority) {
         this.priority = priority;
     }
-
-    // TODO 1: Setup the getter method
-    public String getToDoDescription() {
-
-        throw new UnsupportedOperationException("This function is not implemented yet :(");
-    }
-
-    // TODO 2: Setup the getter method
-    public String getDueDate() {
-
-        throw new UnsupportedOperationException("This function is not implemented yet :(");
-    }
-
-    // TODO 3: Setup the getter method
-    public String getPriority() {
-
-        throw new UnsupportedOperationException("This function is not implemented yet :(");
-    }
-
 }
